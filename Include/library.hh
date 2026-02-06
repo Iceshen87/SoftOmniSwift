@@ -1,6 +1,6 @@
 #ifndef SOFTOMNISWIFT_LIBRARY_H
 #define SOFTOMNISWIFT_LIBRARY_H
 
-void hello(int foo);
+void hello();
 
 #endif // SOFTOMNISWIFT_LIBRARY_H
