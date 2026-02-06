@@ -1,3 +1,8 @@
-//
-// Created by jaschamerle on 2/5/26.
-// 
+
+#include <gtest/gtest.h>
+
+
+TEST(Sanity, Sanity_Test)
+{
+    ASSERT_TRUE(true);
+}
