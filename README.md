@@ -3,4 +3,11 @@
 These are the SoftOmni core libraries, written in a mix of C++ and Swift.
 The build system is Meson.
 
-Use `meson install` to install the libraries.
+---
+Run 
+```sh
+setup.sh
+```
+on Unix systems to setup the development environment.
+
+[//]: # (Run `setup.bat` on Windows systems to setup the development environment.)
