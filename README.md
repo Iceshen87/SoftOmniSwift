@@ -10,7 +10,7 @@ setup.sh
 ```
 on Unix systems to setup the development environment.
 
-On Windows systems, to setup the development environment, run
+On Windows systems, to set up the development environment, run
 ```sh
 setup.bat
 ```
