@@ -1,0 +1,3 @@
+sources += files(
+    'processor.cc'
+)
