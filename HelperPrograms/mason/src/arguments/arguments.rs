@@ -1052,10 +1052,6 @@ impl ArgumentParserState {
         self.path_argument_index
     }
 
-    fn path_object(&self) -> &(PathBuf, TargetKind) {
-        &self.path_object
-    }
-
     fn has_sorting_order_been_seen(&self) -> bool {
         self.sorting_order_seen
     }
@@ -1068,10 +1064,6 @@ impl ArgumentParserState {
 
     fn sorting_order_index(&self) -> usize {
         self.sorting_order_seen_index
-    }
-
-    fn sorting_order(&self) -> &SortingOrder {
-        &self.sorting_order_seen_case
     }
 
     fn has_files_or_folders_first_been_seen(&self) -> bool {
@@ -1092,10 +1084,6 @@ impl ArgumentParserState {
         self.files_or_folders_first_seen_index
     }
 
-    fn files_or_folders_first(&self) -> &FileFolderItemLocation {
-        &self.files_or_folders_first_seen_case
-    }
-
     fn has_max_line_length_been_seen(&self) -> bool {
         self.max_line_length_seen
     }
@@ -1108,10 +1096,6 @@ impl ArgumentParserState {
 
     fn max_line_length_index(&self) -> usize {
         self.max_line_argument_index
-    }
-
-    fn max_line_length(&self) -> usize {
-        self.max_line_length
     }
 
     fn has_forcefully_put_on_distinct_lines_been_seen(&self) -> bool {
@@ -1128,10 +1112,6 @@ impl ArgumentParserState {
         self.forcefully_put_on_distinct_lines_argument_index
     }
 
-    fn forcefully_put_on_distinct_lines(&self) -> bool {
-        self.forcefully_put_on_distinct_lines_case
-    }
-
     fn has_file_glob_been_seen(&self) -> bool {
         self.file_glob_seen
     }
@@ -1144,10 +1124,6 @@ impl ArgumentParserState {
 
     fn file_glob_index(&self) -> usize {
         self.file_glob_argument_index
-    }
-
-    fn file_glob(&self) -> &glob::Pattern {
-        &self.file_glob
     }
 
     fn has_file_pattern_been_seen(&self) -> bool {
@@ -1164,10 +1140,6 @@ impl ArgumentParserState {
         self.file_pattern_argument_index
     }
 
-    fn file_pattern(&self) -> &Regex {
-        &self.file_pattern
-    }
-
     fn has_max_depth_been_seen(&self) -> bool {
         self.max_depth_seen
     }
@@ -1180,10 +1152,6 @@ impl ArgumentParserState {
 
     fn max_depth_index(&self) -> usize {
         self.max_depth_argument_index
-    }
-
-    fn max_depth(&self) -> usize {
-        self.max_depth
     }
 
     fn has_source_variable_name_been_seen(&self) -> bool {
@@ -1200,10 +1168,6 @@ impl ArgumentParserState {
         self.source_variable_name_argument_index
     }
 
-    fn source_variable_name(&self) -> &String {
-        &self.source_variable_name
-    }
-
     fn has_verbose_been_seen(&self) -> bool {
         self.verbose_seen
     }
@@ -1216,10 +1180,6 @@ impl ArgumentParserState {
 
     fn verbose_index(&self) -> usize {
         self.verbose_index
-    }
-
-    fn verbose_case(&self) -> bool {
-        self.verbose_case
     }
 
     fn to_arguments(&self) -> Arguments {
