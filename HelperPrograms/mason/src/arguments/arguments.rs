@@ -371,13 +371,20 @@ impl Arguments {
                 Self::process_glob_named_argument_value(&argument_value, index, state)
             }
             "pattern" => {
-                if state.has_file_glob_been_seen() || state.has_file_pattern_been_seen() {
+                if state.has_file_glob_been_seen() {
                     eprintln!(
                         "The glob and pattern arguments are mutually exclusive and cannot both be specified. \
-                        One of them was already specified as argument n°{}",
+                        A glob pattern has already been registered as argument n°{}",
                         state.file_glob_index()
                     );
                     return ArgumentResult::Error;
+                }
+
+                if state.has_file_pattern_been_seen() {
+                    eprintln!(
+                        "The pattern argument has already been registered as argument n°{}",
+                        state.file_pattern_index()
+                    )
                 }
 
                 Self::process_pattern_named_argument_value(&argument_value, index, state)
