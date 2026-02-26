@@ -306,7 +306,7 @@ impl Arguments {
                 if state.has_sorting_order_been_seen() {
                     eprintln!(
                         "The sorting of elements can only be specified once but it was already specified as argument n°{}",
-                        index
+                        state.sorting_order_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -321,7 +321,7 @@ impl Arguments {
                 if state.has_files_or_folders_first_been_seen() {
                     eprintln!(
                         "The files and folders ordering argument can only be specified once but it was already specified as argument n°{}",
-                        index
+                        state.files_or_folder_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -333,7 +333,7 @@ impl Arguments {
                 if state.has_max_single_line_length_been_seen() {
                     eprintln!(
                         "The max allowed single line files declaration argument can only be specified once but it was already specified as argument n°{}",
-                        index
+                        state.max_single_line_length_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -344,7 +344,7 @@ impl Arguments {
                 if state.has_max_depth_been_seen() {
                     eprintln!(
                         "The max depth argument can only be specified once but it was already specified as argument n°{}",
-                        index
+                        state.max_depth_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -356,7 +356,7 @@ impl Arguments {
                     eprintln!(
                         "The glob and pattern arguments are mutually exclusive and cannot both be specified. \
                         A file pattern has already been registered as argument n°{}",
-                        index
+                        state.file_pattern_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -364,7 +364,7 @@ impl Arguments {
                 if state.has_file_glob_been_seen() {
                     eprintln!(
                         "The glob argument has already been registered as argument n°{}",
-                        index
+                        state.file_glob_index()
                     )
                 }
 
@@ -387,7 +387,7 @@ impl Arguments {
                     eprintln!(
                         "The sources variable name argument has already been specified as arg n°{} \
                         It cannot be specified multiple times.",
-                        index
+                        state.source_variable_name_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -399,7 +399,7 @@ impl Arguments {
                     eprintln!(
                         "The forcefully put file declarations on separate lines argument has already been specified as arg n°{}. \
                         It cannot be specified multiple times.",
-                        index
+                        state.forcefully_put_on_distinct_lines_index()
                     );
                     return ArgumentResult::Error;
                 }
@@ -412,7 +412,7 @@ impl Arguments {
                     eprintln!(
                         "The verbose argument has already been specified as arg n°{}.\
                         It cannot be specified multiple times.",
-                        index
+                        state.verbose_index()
                     );
                     return ArgumentResult::Error;
                 }
