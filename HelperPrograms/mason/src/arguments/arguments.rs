@@ -150,14 +150,6 @@ impl Arguments {
         &self.sorting_order
     }
 
-    pub fn target_kind(&self) -> &TargetKind {
-        &self.target_kind
-    }
-
-    pub fn information_request(&self) -> &Option<InformationKind> {
-        &self.information_request
-    }
-
     pub fn is_help(&self) -> bool {
         matches!(self.information_request, Some(InformationKind::Help))
     }
@@ -200,10 +192,6 @@ impl Arguments {
 
     pub fn is_file_target(&self) -> bool {
         matches!(self.target_kind, TargetKind::File)
-    }
-
-    pub fn is_folder_target(&self) -> bool {
-        matches!(self.target_kind, TargetKind::Folder)
     }
 
     pub fn parse_from_standard_in() -> Option<Self> {
