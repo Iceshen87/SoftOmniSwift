@@ -911,25 +911,6 @@ impl Arguments {
         ArgumentResult::OK
     }
 
-    fn flag_processor<CheckFunction, ApplierFunction>(
-        state: &mut ArgumentParserState,
-        seen_check: CheckFunction,
-        message: &str,
-        applier: ApplierFunction,
-    ) -> ArgumentResult
-    where
-        CheckFunction: Fn() -> bool,
-        ApplierFunction: Fn(&mut ArgumentParserState),
-    {
-        if seen_check() {
-            eprintln!("{message}");
-            return ArgumentResult::Error;
-        }
-
-        applier(state);
-        ArgumentResult::OK
-    }
-
     fn is_valid_argument_character_long_options(character: char) -> bool {
         character.is_ascii_alphabetic() || character == '-' || character == '_'
     }
@@ -942,14 +923,6 @@ enum ArgumentResult {
     Version,
     License,
 }
-
-trait ArgumentParserStateElement {}
-
-impl ArgumentParserStateElement for (PathBuf, TargetKind) {}
-
-impl ArgumentParserStateElement for SortingOrder {}
-
-impl ArgumentParserStateElement for FileFolderItemLocation {}
 
 struct ArgumentParserState {
     path_seen: bool,
