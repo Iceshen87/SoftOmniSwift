@@ -330,7 +330,7 @@ impl Arguments {
             }
             "max-allowed-single-line-files-declaration"
             | "max_allowed_single_line_files_declaration" => {
-                if state.has_max_line_length_been_seen() {
+                if state.has_max_single_line_length_been_seen() {
                     eprintln!(
                         "The max allowed single line files declaration argument can only be specified once but it was already specified as argument n°{}",
                         index
@@ -1057,7 +1057,7 @@ impl ArgumentParserState {
         self.files_or_folders_first_seen_index
     }
 
-    fn has_max_line_length_been_seen(&self) -> bool {
+    fn has_max_single_line_length_been_seen(&self) -> bool {
         self.max_line_length_seen
     }
 
@@ -1067,7 +1067,7 @@ impl ArgumentParserState {
         self.max_line_length = max_line_length;
     }
 
-    fn max_line_length_index(&self) -> usize {
+    fn max_single_line_length_index(&self) -> usize {
         self.max_line_argument_index
     }
 
