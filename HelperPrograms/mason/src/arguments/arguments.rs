@@ -375,7 +375,7 @@ impl Arguments {
                     eprintln!(
                         "The glob and pattern arguments are mutually exclusive and cannot both be specified. \
                         One of them was already specified as argument n°{}",
-                        index
+                        state.file_glob_index()
                     );
                     return ArgumentResult::Error;
                 }
