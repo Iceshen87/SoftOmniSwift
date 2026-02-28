@@ -114,13 +114,3 @@ language or target, open an issue and discuss it with the maintainers. Quality
 contributions are always welcome in-tree.
 
 ---
-
-## Getting Set Up
-
-```sh
-# Linux / macOS
-sh setup.sh
-
-# Windows
-setup.bat
-```
