@@ -30,6 +30,9 @@ Do not submit AI-generated code you do not fully understand. Reviewers will ask 
 explain and defend your changes, and "the AI wrote it" is not an acceptable answer. The
 same quality bar applies to all contributions regardless of how they were produced.
 
+If you find yourself relying on AI because you're not yet familiar enough with the codebase or the relevant concepts to write the code yourself, that's a sign to take a step back. We encourage you to spend that time learning and practicing instead.
+We're not against you contributing in the future once you've built up the experience, in fact we wholeheartedly welcome seeing people grow into the field and come back ready to contribute.
+
 ---
 
 ## Branch Naming
