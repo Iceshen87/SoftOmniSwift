@@ -106,10 +106,6 @@ A few things to keep in mind when opening a PR:
 
 ---
 
-## Code Style
-
----
-
 ## In-Tree Contributions
 
 We strongly encourage upstreaming over forking. If you want to add support for a
